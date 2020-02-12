@@ -1,0 +1,45 @@
+<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!!</p>
+<h3>All registered users:</h3>
+<ul>
+    <li ng-repeat="user in vm.allUsers">
+        {{user.username}} ({{user.firstName}} {{user.lastName}})
+        - <a ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+	<li>
+<div ng-app="">
+<p>My first expression: {{ 5 + 5 }}</p>
+</div>
+	</li>
+</ul>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = "admin:admin";
+    var enc = window.btoa(str);
+
+    var res = "Encoded String: " + enc;
+	alert(res);
+    document.getElementById("demo").innerHTML = "The original string: " + str + "<br>" + res;
+}
+</script>
+<p>&nbsp;</p>
+ <div ng-controller = "HelloController" >
+         <h2>Welcome {{helloTo.title}} to the world of Tutorialspoint!</h2>
+      </div>
+
+<p><a href="#!/login" class="btn btn-primary">Logout</a></p>
+<hr>
+ 
+   
+ <script>
+         angular.module("myapp", [])
+         
+         .controller("HelloController", function($scope) {
+            $scope.helloTo = {};
+            $scope.helloTo.title = "AngularJS";
+         });
+      </script>
