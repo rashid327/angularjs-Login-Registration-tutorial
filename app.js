@@ -2,9 +2,9 @@
     'use strict';
 
     angular
-        .module('app', ['ngRoute', 'ngCookies'])
-        .config(config)
-        .run(run);
+	.module('app', ['ngRoute', 'ngCookies'])
+	.config(config)
+	.run(run);
 
     config.$inject = ['$routeProvider', '$locationProvider'];
 	angular.module("myapp", [])
@@ -19,9 +19,9 @@
                 controller: 'HomeController',
                 templateUrl: 'home/home.view.html',
                 controllerAs: 'vm'
-									 .controller("HelloController", function($scope) {
-								$scope.helloTo = {};
-								$scope.helloTo.title = "AngularJS";
+		.controller("HelloController", function($scope) {
+		$scope.helloTo = {};
+		$scope.helloTo.title = "AngularJS";
             })
 			
 
